@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIC TAC TOE</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,6 +21,82 @@
 <script src="script.js"></script>
 
 <body>
+    <img id="game-over" class="game-over d-none" src="./img/gameover.jpg">
     
+    <button onclick="restart()" id="restart-btn" class="restart-btn d-none">Restart</button>
+
+    <div class="playerPanel">
+        <div id="player-1">
+            <img class="playerPanelImg" src="img/cross.png"> Player 1
+        </div>
+        <div id="player-2" class="playerInactive">
+            <img class="playerPanelImg" src="img/circle.png"> Player 2
+        </div>
+    </div>
+
+    <div class="winningTable">
+        <!--Winning: horizontal Container-->
+        <div id="line-0" class="horizontal-line" style="top: 60px;"></div>
+        <div id="line-1" class="horizontal-line" style="top: 200px"></div>
+        <div id="line-2" class="horizontal-line" style="top: 340px"></div>
+
+
+        <!--Winning: vertical Container-->
+        <div id="line-3" class="horizontal-line change-vertical"></div>
+        <div id="line-4" class="horizontal-line change-vertical" style="left: 170px;"></div>
+        <div id="line-5" class="horizontal-line change-vertical" style="left: -110px;"></div>
+
+        <!--Winning: diagonal Container-->
+        <div id="line-6" class="horizontal-line change-vertical" style="transform: rotate(45deg) scaleX(0.0);"></div>
+        <div id="line-7" class="horizontal-line change-vertical" style="transform: rotate(-45deg) scaleX(0.0);"></div>
+
+        <table>
+            <tr>
+                <td onclick="fillShape(0)">
+                    <img id="circle-0" class="shape d-none" src="img/circle.png">
+                    <img id="cross-0" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(1)">
+                    <img id="circle-1" class="shape d-none" src="img/circle.png">
+                    <img id="cross-1" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(2)">
+                    <img id="circle-2" class="shape d-none" src="img/circle.png">
+                    <img id="cross-2" class="shape d-none" src="img/cross.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(3)">
+                    <img id="circle-3" class="shape d-none" src="img/circle.png">
+                    <img id="cross-3" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(4)">
+                    <img id="circle-4" class="shape d-none" src="img/circle.png">
+                    <img id="cross-4" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(5)">
+                    <img id="circle-5" class="shape d-none" src="img/circle.png">
+                    <img id="cross-5" class="shape d-none" src="img/cross.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(6)">
+                    <img id="circle-6" class="shape d-none" src="img/circle.png">
+                    <img id="cross-6" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(7)">
+                    <img id="circle-7" class="shape d-none" src="img/circle.png">
+                    <img id="cross-7" class="shape d-none" src="img/cross.png">
+                </td>
+                <td onclick="fillShape(8)">
+                    <img id="circle-8" class="shape d-none" src="img/circle.png">
+                    <img id="cross-8" class="shape d-none" src="img/cross.png">
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
 </body>
+
 </html>
