@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,10 +23,14 @@
 
 <body>
     <img id="game-over" class="game-over d-none" src="./img/gameover.jpg">
-    
+
     <button onclick="restart()" id="restart-btn" class="restart-btn d-none">Restart</button>
 
     <div class="playerPanel">
+        <div class="header">
+            TIC TAC TOE
+        </div>
+        
         <div id="player-1">
             <img class="playerPanelImg" src="img/cross.png"> Player 1
         </div>
@@ -43,8 +48,8 @@
 
         <!--Winning: vertical Container-->
         <div id="line-3" class="horizontal-line change-vertical"></div>
-        <div id="line-4" class="horizontal-line change-vertical" style="left: 170px;"></div>
-        <div id="line-5" class="horizontal-line change-vertical" style="left: -110px;"></div>
+        <div id="line-4" class="horizontal-line change-vertical" style="left: 181px;"></div>
+        <div id="line-5" class="horizontal-line change-vertical" style="left: -99px;"></div>
 
         <!--Winning: diagonal Container-->
         <div id="line-6" class="horizontal-line change-vertical" style="transform: rotate(45deg) scaleX(0.0);"></div>
@@ -93,9 +98,7 @@
                     <img id="cross-8" class="shape d-none" src="img/cross.png">
                 </td>
             </tr>
-
         </table>
-
     </div>
 </body>
 

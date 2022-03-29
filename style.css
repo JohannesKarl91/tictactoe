@@ -15,6 +15,10 @@ body {
     margin-bottom: 24px;
 }
 
+.header {
+    font-weight: bold;
+}
+
 .playerPanel img {
     width: 60px;
     margin-right: 16px;
@@ -77,7 +81,7 @@ td:hover {
 .horizontal-line {
     height: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 350px;
+    width: 330px;
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
@@ -131,12 +135,73 @@ td:hover {
     background-color: rgb(214, 180, 20);
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 700px) {
     .playerPanel div {
         font-size: 20px;
     }
 
     .playerPanel img {
         width: 50px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shape {
+        top: 20px;
+        left: 12px;
+        width: 60px;
+    }
+
+    .horizontal-line {
+        width: 270px;
+    }
+
+    .change-vertical {
+        top: 150px !important;
+    }
+
+    .playerPanel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .playerPanelImg {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    #line-0 {
+        top: 45px !important;
+    }
+
+    #line-1 {
+        top: 151px !important;
+    }
+
+    #line-2 {
+        top: 258px !important;
+    }
+
+    #line-4 {
+        left: 86px !important;
+    }
+
+    #line-5 {
+        left: -93px !important;
+    }
+
+    .game-over {
+        width: 94%;
+        margin: 8px;
+    }
+
+    .restart-btn {
+        width: 200px !important;
+        height: 55px !important;
+        bottom: 202px !important;
     }
 }
